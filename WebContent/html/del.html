@@ -1,0 +1,57 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../css/juice style.css"/>
+<script src="../js/jquery-1.12.3.js" type="text/javascript"></script>
+<script src="../js/addproduct.js" type="text/javascript"></script>
+<script src="../js/productvalidation.js" type="text/javascript"></script>
+<script src="../js/delproduct.js" type="text/javascript"></script>
+<script>
+function juice(){
+		// create main div whole div
+	var maindiv=document.createElement("div");
+	document.body.appendChild(maindiv);
+
+	// title division
+	 var titdiv=document.createElement("div");
+	 titdiv.setAttribute("class","head");
+	 var img=document.createElement("img");
+	 img.setAttribute("class","imge");
+	 img.setAttribute("src","../images/l.jpg");
+	 titdiv.appendChild(img);
+	 maindiv.appendChild(titdiv);
+
+
+	 //buttonn divs
+
+	 var but1=document.createElement("button");
+	 var tx1=document.createTextNode("BUYNOW");
+	 but1.setAttribute("id","now");
+	 but1.appendChild(tx1);
+	 titdiv.appendChild(but1);	
+
+	 //del div
+var deldiv=document.createElement("div");
+deldiv.setAttribute("type","text");
+deldiv.setAttribute("id","deldi");
+maindiv.appendChild(deldiv);
+var p=document.createElement("p");
+var t=document.createTextNode("ProjectId:");
+p.appendChild(t);
+deldiv.appendChild(p);
+
+var inps=document.createElement("input");
+inps.setAttribute("id","pid");
+
+
+deldiv.appendChild(inps);
+var butt=document.createElement("button");
+var tee=document.createTextNode("submit");
+butt.appendChild(tee);
+butt.setAttribute("id","dels");
+deldiv.appendChild(butt);
+}
+</script>
+</head>
+<body onload="juice()">
+</body>
+</html>

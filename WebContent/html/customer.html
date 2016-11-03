@@ -1,0 +1,99 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../css/juice style.css"/>
+<script src="../js/jquery-1.12.3.js" type="text/javascript"></script>
+<script src="../js/addcustomer.js" type="text/javascript"></script>
+
+<script>
+function customer(){
+	// create main div whole div
+	var maindiv=document.createElement("div");
+	document.body.appendChild(maindiv);
+
+	// title division
+	 var titdiv=document.createElement("div");
+	 titdiv.setAttribute("class","head");
+	 var img=document.createElement("img");
+	 img.setAttribute("class","imge");
+	 img.setAttribute("src","../images/l.jpg");
+	 titdiv.appendChild(img);
+	 maindiv.appendChild(titdiv);
+
+
+	 //buttonn divs
+
+	 var but1=document.createElement("button");
+	 var tx1=document.createTextNode("ADDNOW");
+	  but1.appendChild(tx1);
+	 titdiv.appendChild(but1);	
+
+
+//customer division//
+
+	var div2=document.createElement("main2");
+	div2.setAttribute("id","cc");
+
+	//text box div
+	var  table=document.createElement("table");
+	div2.appendChild(table);
+	document.body.appendChild(div2);
+	
+	var tr1=document.createElement("tr");
+	var td1=document.createElement("td");
+	var text1=document.createTextNode("CustomerName:");
+	td1.appendChild(text1);
+	tr1.appendChild(td1);
+	var inp=document.createElement("input");
+	inp.setAttribute("id","Cname");
+	tr1.appendChild(inp);
+	table.appendChild(tr1);
+
+
+
+	var tr2=document.createElement("tr");
+	var td2=document.createElement("td");
+	var text2=document.createTextNode("Amount:");
+	td2.appendChild(text2);
+	tr2.appendChild(td2);
+	var inp1=document.createElement("input");
+	inp1.setAttribute("id","Amount")
+	tr2.appendChild(inp1);
+	table.appendChild(tr2);
+
+
+	var tr3=document.createElement("tr");
+	var td3=document.createElement("td");
+	var text3=document.createTextNode("CardNo:");
+	td3.appendChild(text3);
+	tr3.appendChild(td3);
+	var inp2=document.createElement("input");
+	inp2.setAttribute("id","CardNo");
+	tr3.appendChild(inp2);
+	table.appendChild(tr3);
+
+	var tr4=document.createElement("tr");
+	td4=document.createElement("td");
+	var text4=document.createTextNode("PID");
+	td4.appendChild(text4);
+	tr4.appendChild(td4);
+	var inp3=document.createElement("input");
+	inp3.setAttribute("id","pid");
+	tr4.appendChild(inp3);
+	table.appendChild(tr4);
+
+	//button div
+	var di=document.createElement("div");
+	di.setAttribute("id","but");
+	var but2=document.createElement("button");
+	var te=document.createTextNode("ADD");
+	but2.appendChild(te); 
+	but2.setAttribute("id","po");
+	di.appendChild(but2);
+	div2.appendChild(di);
+}
+
+</script>
+</head>
+<body onload="customer()">
+</body>
+</html>

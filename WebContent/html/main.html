@@ -1,0 +1,94 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../css/juice style.css"/>
+<script src="../js/jquery-1.12.3.js" type="text/javascript"></script>
+<script src="../js/addproduct.js" type="text/javascript"></script>
+<script src="../js/productvalidation.js" type="text/javascript"></script>
+
+
+<script>
+
+function juice(){
+		// create main div whole div
+	var maindiv=document.createElement("div");
+	document.body.appendChild(maindiv);
+
+	// title division
+	 var titdiv=document.createElement("div");
+	 titdiv.setAttribute("class","head");
+	 var img=document.createElement("img");
+	 img.setAttribute("class","imge");
+	 img.setAttribute("src","../images/l.jpg");
+	 titdiv.appendChild(img);
+	 maindiv.appendChild(titdiv);
+
+
+	 //buttonn divs
+
+	 var but1=document.createElement("button");
+	 var tx1=document.createTextNode("BUYNOW");
+	 but1.setAttribute("id","now");
+	 but1.appendChild(tx1);
+	 titdiv.appendChild(but1);	
+
+	// text box div
+	var div1=document.createElement("div");
+	div1.setAttribute("class","content");
+	var  table=document.createElement("table");
+	div1.appendChild(table);
+	document.body.appendChild(div1);
+	
+	var tr1=document.createElement("tr");
+	var td1=document.createElement("td");
+	var text1=document.createTextNode("ProductName:");
+	td1.appendChild(text1);
+	tr1.appendChild(td1);
+	var inp=document.createElement("input");
+	inp.setAttribute("id","pname");
+	tr1.appendChild(inp);
+	table.appendChild(tr1);
+
+
+
+	var tr2=document.createElement("tr");
+	var td2=document.createElement("td");
+	var text2=document.createTextNode("Quantity:");
+	td2.appendChild(text2);
+	tr2.appendChild(td2);
+	var inp1=document.createElement("input");
+	inp1.setAttribute("id","quantity");
+	tr2.appendChild(inp1);
+	table.appendChild(tr2);
+
+
+	var tr3=document.createElement("tr");
+	var td3=document.createElement("td");
+	var text3=document.createTextNode("Price:");
+	td3.appendChild(text3);
+	tr3.appendChild(td3);
+	var inp2=document.createElement("input");
+	inp2.setAttribute("id","price");
+	tr3.appendChild(inp2);
+	table.appendChild(tr3);
+
+
+//button div
+	var but2=document.createElement("button");
+	var te=document.createTextNode("ADD");
+	but2.appendChild(te); 
+	but2.setAttribute("id","send");
+	but2.setAttribute("onclick","proValidation()");
+	div1.appendChild(but2);
+
+
+
+	
+}
+
+</script>
+</head>
+<body onload="juice()">
+
+
+</body>
+</html>
